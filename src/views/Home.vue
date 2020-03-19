@@ -19,7 +19,14 @@
     <Children v-for="girl in girls" :girl="girl" :key="girl.id"/>
    <Short v-for="short in shorts" :short="short" :key="short.id"/>
  <Bridal v-for="bridal in bridals" :bridal="bridal" :key="bridal.id"/>
-     </div>
+  </div>
+ <div class="footer-container">
+       <Footer :footer='footer' id="footer" />
+
+ </div>
+
+
+    
     </div>
       
 </template>
@@ -34,7 +41,7 @@ import Short from '@/components/Short.vue'
 import Bridal from '@/components/Bridal.vue'
 import Product from '@/components/ProductList.vue'
 import Slider from '@/components/Slider.vue'
-
+import Footer from '@/components/Footer.vue'
 export default {
   name: 'Home',
   data(){
@@ -59,19 +66,19 @@ export default {
       ],
       dresses: [ 
        {
-        name: " Grey Winter Office Wear",
+        name: "men custom made fashion",
         price: "₦50000",
-         imageLink: "https://dqzrr9k4bjpzk.cloudfront.net/images/9497261/618095184.jpg" 
+         imageLink: "https://ankaralovers.info/wp-content/uploads/2019/08/abb22a06559ca8449651d29683e8f143.jpg" 
       },
       {
         name: "custom made office wear",
         price: "₦50000",
-         imageLink: "https://dqzrr9k4bjpzk.cloudfront.net/images/9497261/613908881.jpg" 
+         imageLink: "https://i.pinimg.com/originals/d1/eb/97/d1eb974d925cb5855d8629936682d321.jpg" 
       },
       {
-        name: "favorite red office dress",
+        name: "African fabric designs for men",
         price: "₦50000",
-         imageLink: "https://dqzrr9k4bjpzk.cloudfront.net/images/9497261/572043406.jpg" 
+         imageLink: "https://i.ytimg.com/vi/Pmo6_tercC0/maxresdefault.jpg" 
       },
        
       ],
@@ -114,19 +121,19 @@ export default {
       ],
      bridals: [ 
        {
-         name: "custom made dress for girls",
+         name: "NAija bridal fashion",
         price: "₦50000",
-         imageLink: "https://www.promfy.com/uploads/product/2/7/27122/Illusion-beaded-lace-glitter-mermaid-long-bridal-prom-dress-with-feather-embellishement-1-thumb.jpg" 
+         imageLink: "https://i2.wp.com/www.od9jastyles.com/wp-content/uploads/2019/02/ankara_and_asoebi_styles_1548908762.jpg?resize=608%2C760&ssl=1" 
       },
       {
-       name: "custom made dress for girls",
+       name: "blue bridal dress for traditional wedding",
         price: "₦50000",
-         imageLink: "https://www.promfy.com/uploads/product/2/7/27102/Off-white-lace-and-tulle-Boho-country-scalloped-A-line-long-wedding-gown-1-thumb.jpg" 
+         imageLink: "https://i.pinimg.com/736x/8a/3e/39/8a3e396186c0fb367a107c645ec9517a.jpg" 
       },
       {
-        name: "custom made dress for girls",
+        name: "yellow ankara wedding dress",
         price: "₦50000",
-         imageLink: "https://www.promfy.com/uploads/product/2/H/2H261/V-neck-pleated-bodice-horsehair-skirt-wedding-dress-1-thumb.jpg" 
+         imageLink: "https://ankarafashion.com.ng/wp-content/uploads/2018/06/ball-12.jpg" 
       },
        
       ],
@@ -137,19 +144,19 @@ export default {
        moving: [
          {
        
-           imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRIhR_xxP-1PoSZJRS22uk59ctdU9_lscIkggr64F2wexoz9OZ"
+           imageLink: "https://ae01.alicdn.com/kf/HTB15NFUXcfrK1Rjy1Xdq6yemFXab/African-aso-oke-headtie-auto-asoebi-gele-headwear-flower-decorate-african-turban-headwraps.jpg"
        },
        {
        
-        imageLink: "https://dqzrr9k4bjpzk.cloudfront.net/images/9497261/618095184.jpg" 
+        imageLink: "https://www.turbantempest.com/wp-content/uploads/2019/10/Complicated-Aso-Oke.png" 
        },
        {
         
-         imageLink: "https://www.xdressy.com/uploads/product/1/7/17863/off-the-shoulder-two-piece-red-satin-mermaid-prom-gown-1.jpg" 
+         imageLink: "https://www.bellanaija.com/wp-content/uploads/2018/10/aso_ebi-asoebi-asoebibella1.1804635F-8745-4BB1-B67A-836B5A895D05.jpg" 
       },
        {
        
-         imageLink: "https://olist-uc.feednews.com/upload/20200226/ncl1u1wwgle.jpg" 
+         imageLink: "https://i2.wp.com/www.od9jastyles.com/wp-content/uploads/2020/01/Top-10-Gorgeous-Bride-Aso-Oke-and-Makeup-Styles-for-Event-9.jpg?fit=469%2C368&ssl=1" 
       },
       ]
      
@@ -163,14 +170,15 @@ export default {
     Short,
     Bridal,
     Product,
-    Slider
+    Slider,
+    Footer
   }
 }
 </script>
 <style scoped>
 
 .home{
-  display: inline;
+  /* display: inline; */
   width: 70%;
   float: right;
  
@@ -181,10 +189,22 @@ export default {
 
 }
 .categories{
-  display: inline;
+  /* display: inline; */
 width: 25vw;
 margin:100px 20px ;
 position:fixed;
 left: 0;
 }
+</style>
+<style>
+.footer-container{
+     background-color: rgb(133, 123, 125);
+     display: inline-block;
+     z-index: 300;
+     position: relative;
+     width: 100vw;
+   }
+   #footer{
+     width: 100%;
+   }
 </style>

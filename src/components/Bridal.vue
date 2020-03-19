@@ -6,6 +6,7 @@
     <div class="right">
       <p>{{bridal.name}}</p>
       <small>{{bridal.price}}</small>
+      <button class="buy">buy now</button>
     </div>
   </div>
 </template>

@@ -5,7 +5,9 @@
       <router-link to="/about">About</router-link>
     </div> -->
 
-
+       <!-- <div class="container">
+          <div id="overlay"></div>
+   -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
   <a class="navbar-brand" href="/"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +32,26 @@
   </div>
 </nav>
     <router-view/>
+    <!-- </div> -->
   </div>
 </template>
 
 <style>
+/* #overlay{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+} */
+#app{
+  /* background-image: url('https://cdn.pixabay.com/photo/2014/04/04/14/55/silver-313347_960_720.jpg'); */
+  background-color: rgba(199, 209, 209, 0.253);
+}
  #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,6 +64,8 @@
     width: 100vw;
    position: fixed;
    margin-bottom: 200px;
+   z-index: 100;
+   
 }
 #name{
 font-size:40px;

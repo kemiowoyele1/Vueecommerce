@@ -6,6 +6,8 @@
     <div class="right">
       <p>{{short.name}}</p>
       <small>{{short.price}}</small>
+         <button class="buy">buy now</button>
+  
     </div>
   </div>
 </template>

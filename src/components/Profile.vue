@@ -7,6 +7,8 @@
     <div class="right">
       <p>{{user.name}}</p>
       <small>{{user.price}}</small>
+         <button class="buy">buy now</button>
+  
     </div>
   </div>
 </template>
