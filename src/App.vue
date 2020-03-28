@@ -24,7 +24,7 @@
         <router-link class="nav-link" to="/about">About  </router-link>
       </li>
     </ul>
-    <span id ='name'>Chris-Mart</span>
+    <span id ='name'>CHRIS-Mart</span>
     <form class="form-inline my-2 my-lg-0">
       <router-link class="nav-link" to="/login">Login  </router-link>
       <router-link class="btn btn-outline-primary my-2 my-sm-0" type="submit" to="/register"> Register</router-link>
@@ -50,7 +50,8 @@
 } */
 #app{
   /* background-image: url('https://cdn.pixabay.com/photo/2014/04/04/14/55/silver-313347_960_720.jpg'); */
-  background-color: rgba(199, 209, 209, 0.253);
+  background-image: url('https://cdn.shopify.com/s/files/1/0276/6855/articles/Wax_print_wash_3_1024x1024.jpg?v=1478201027');
+
 }
  #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -65,14 +66,17 @@
    position: fixed;
    margin-bottom: 200px;
    z-index: 100;
-   
+   border: 2px solid silver;
+     /* background-color: rgba(199, 209, 209, 0.938); */
+
 }
 #name{
 
 font-size:40px;
-font-weight: bold;
+font-weight: 800;
 margin:auto;
-  color: gray;
+  color: rgb(35, 34, 49);
+  letter-spacing: 36px;
   transition-property: background-color;
   transition-duration: 1s;
   transition-timing-function: linear;
@@ -92,7 +96,22 @@ margin:auto;
   color: rgb(47, 48, 75);
 
  }
+@media only screen and (max-width: 600px) {
+  #nav {
+   position: relative;
+   margin-bottom: 0;
+     }
+     #name{
 
+font-size:30px;
+font-weight: 400;
+  color: rgb(35, 34, 49);
+  letter-spacing: 2px;
+ }
+ #app{
+   width: 100vw;
+ }
+}
 /* 
 #nav a {
   font-weight: bold;

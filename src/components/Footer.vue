@@ -3,7 +3,7 @@
 <footer class="page-footer font-small mdb-color pt-4" id="footer1">
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+  <div class="container text-center text-md-left" style="color:white">
 
     <!-- Footer links -->
     <div class="row text-center text-md-left mt-3 pb-3">
@@ -150,7 +150,8 @@ export default {
 
 <style  scoped>
 #footer1{
-background-color: rgb(70, 70, 70);
+background-color: rgb(30, 19, 187);
 color: white;
+margin-top: 100px;
 }
 </style>

@@ -6,7 +6,9 @@
     <div class="right">
       <p>{{dress.name}}</p>
       <small>{{dress.price}}</small>
-         <button class="buy">buy now</button>
+         <!-- <button class="buy">buy now</button> -->
+             <router-link class="nav-link" to="/productDesc">buy now </router-link>
+  
   
     </div>
   </div>
@@ -19,8 +21,8 @@ export default {
 </script>
 
 <style>
-div.profile {
-  border: 1px solid #ccc;
+ #profile {
+  /* border: 1px solid #ccc; */
  width: 25%;
   height: 350px;
   border-radius: 5px;
@@ -30,6 +32,8 @@ div.profile {
   /* display: inline; */
   float: left;
   margin: 20px;
+  box-shadow:2px 3px 2px silver;
+  border: 10px solid red;
 
 }
 div.left {
@@ -42,7 +46,7 @@ img{
 .buy{
   display: block;
   margin: 2px auto;
-  background: grey;
+  background: rgb(35, 34, 49);
   color: white;
   text-shadow: 0.5px 0.5px rgb(160, 114, 204), -0.5px -0.5px rgb(160, 114, 204);
 }
@@ -52,6 +56,12 @@ img{
   font-weight: bolder;
   padding: 5px;
 
+}
+@media only screen and (max-width: 600px) {
+  div.profile {
+    width: 90%;
+    margin: 0;
+  }
 }
 /* div.right {
   float: right;

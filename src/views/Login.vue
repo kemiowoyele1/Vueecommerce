@@ -29,7 +29,10 @@
       </div>
       <div class="col-md-3"></div>
     </div>
+    <p>{{sitename}}</p>
+    <p>this a a {{page}} page</p>
   </div>
+
 </template>
 
 <script>
@@ -43,6 +46,7 @@ export default {
 
     };
   },
+
   methods: {
       login(){
           console.log(`
@@ -51,9 +55,21 @@ export default {
           `)
           router.push('/dashboard')
       }
+  },
+   computed: {
+    sitename(){
+     return this.$store.state.siteName;
+    },
+    page() {
+      return  this.$store.state.pageName;
+    }
   }
 };
 </script>
 
-<style>
+<style scoped>
+p{
+  font-size:30px;
+  color: blue;
+}
 </style>

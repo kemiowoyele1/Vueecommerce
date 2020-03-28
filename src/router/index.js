@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
+import productDesc from '../views/productDesc.vue'
+import ProductDetails from '../views/ProductDetails.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +20,11 @@ const routes = [{
         component: Login
     },
     {
+        path: '/products',
+        name: 'ProductDetails',
+      
+       },
+    {
         path: '/register',
         name: 'Register',
         component: Register
@@ -26,6 +33,11 @@ const routes = [{
         path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard
+    },
+    {
+        path: '/productDesc',
+        name: 'productDesc',
+        component: productDesc
     },
     {
         path: '/about',
