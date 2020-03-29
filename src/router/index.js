@@ -6,6 +6,8 @@ import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import productDesc from '../views/productDesc.vue'
 import ProductDetails from '../views/ProductDetails.vue'
+import Users from '../views/Users.vue'
+import Comments from '../views/Comments.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +26,20 @@ const routes = [{
         name: 'ProductDetails',
       
        },
+
+       {
+        path: '/users',
+        component: Users,
+      
+       },
+
+       {
+        path: '/comments',
+        component: Comments,
+      
+       },
+
+
     {
         path: '/register',
         name: 'Register',

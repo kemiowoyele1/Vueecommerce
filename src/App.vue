@@ -23,6 +23,10 @@
       <li class="nav-item">
         <router-link class="nav-link" to="/about">About  </router-link>
       </li>
+    
+     <li class="nav-item">
+        <router-link class="nav-link" to="/users">Users  </router-link>
+      </li>
     </ul>
     <span id ='name'>CHRIS-Mart</span>
     <form class="form-inline my-2 my-lg-0">

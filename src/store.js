@@ -20,7 +20,7 @@ const store = new Vuex.Store({
     imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0b3SlB6BP2vYQLhHFhENI9T4H-etin-fJ_sAqxqEaBSvRwM8k" 
   },
   {
-    name: "Aso-oke 9 piece wedding couple",
+    name: "Aso-oke wedding couple",
     price: "₦50000",
      imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGsSyaGtOxVWkkxqFG4WyiC_jx0eaogEAw1gt2-tSlul93BVN4" 
   },
