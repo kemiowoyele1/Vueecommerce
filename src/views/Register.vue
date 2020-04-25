@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <h1>Create Account</h1>
+<div>
+ <Header :header='header' id="header" />
 
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
+  <div class="sign-up-container">
+    
+    <h1 class="register-heading">Create Account</h1>
+
+    
         <form v-on:submit.prevent>
-          <div class="form-group">
+          <div >
             <input
               type="text"
               class="form-control"
@@ -38,10 +40,10 @@
               placeholder="Email Address"
             />
           </div>
-          <div class="form-group">
+          <div>
             <input
               type="password"
-              class="form-control"
+        
               id="password"
               v-model="password"
               placeholder="Password"
@@ -52,24 +54,42 @@
           <div class="form-group">
             <input
               type="password"
-              class="form-control"
+       
               id="confirmPassword"
               v-model="confirm_password"
               placeholder="Confirm Password"
             />
           </div>
           <div v-if="password !=confirm_password" class="text-danger">Password do not match</div>
-          <button @click="register()" type="submit" class="btn btn-primary">Register</button>
+          <button @click="register()" type="submit" class="register">Register</button>
+           <div>
+             <p class="log-in-text">
+               already have an account? Log in
+             </p>
+           </div>
+           <div>
+                    <router-link class="nav-link" to="/login" id="sign-in">  
+               Here
+                 </router-link>
+           </div>
+         
+           
         </form>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-  </div>
+        </div>
+        <div class="footer-container">
+       <Footer footer='footer' id="footer" />
+</div>
+      
+</div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+
 export default {
   name: "Register",
+  
   data() {
     return {
       first_name: "",
@@ -79,6 +99,7 @@ export default {
       confirm_password: ""
     };
   },
+     
   methods: {
     register() {
       console.log(`
@@ -86,13 +107,100 @@ export default {
             Last Name: ${this.last_name}
             Email: ${this.email}
             Password: ${this.password}
+             `);
             
-            
-            `);
     }
+   
+  },
+  components: {
+    Header,
+      Footer
   }
 };
+  
 </script>
 
 <style>
+.sign-up-container{
+  min-height: 100vh;
+  top: 100px;
+  padding: 50px;
+
+}
+
+.log-in-text{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px;
+   color: tomato;
+
+}
+input{
+  width: 80%;
+  font-size: 40px;
+  color: tomato;
+  background-color: antiquewhite;
+  padding: 7px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.register , #sign-in{
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: antiquewhite;
+  background-color: tomato;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px brown;
+  border:2px solid  antiquewhite;
+  margin: 30px;
+  text-decoration: none;
+}
+.register-heading{
+  font-size: 40px;
+  font-weight: 900;
+  color: tomato;
+  text-shadow: 1px 1px antiquewhite, 2px 2px antiquewhite,
+               -1px -1px antiquewhite, -2px -2px antiquewhite;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+  
+.sign-up-container{
+  min-height: 100vh;
+  top: 100px;
+  padding: 50px;
+
+}
+
+.log-in-text{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px;
+   color: tomato;
+
+}
+input{
+  width: 86%;
+  font-size: 18px;
+  color: tomato;
+  background-color: antiquewhite;
+  padding: 7px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.register , #sign-in{
+  padding: 6px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px;
+}
+.register-heading{
+  font-size: 30px;
+  font-weight: 600;
+ 
+}
+
+}
 </style>

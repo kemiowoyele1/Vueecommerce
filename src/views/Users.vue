@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="users-container">
       <ul class="list-group" id="ul">
         <li class="list-group-item" v-for="user in users" :key="user" id="li"> 
           <div id="users">
@@ -42,6 +42,10 @@ export default {
 p{
   font-weight: bold;
   text-align: left;
+}
+.users-container{
+  height: 100vh;
+  /* background-image: url(./../assets/body.jpg); */
 }
 #users{
   /* background: rgb(57, 57, 66);

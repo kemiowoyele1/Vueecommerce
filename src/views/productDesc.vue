@@ -1,26 +1,11 @@
 <template>
   <div>
       <div class="main-container">
+              <Header :header='header' id="header" />
 
             <div class="container">
-                        <h1> {{ product.name }} </h1>
+                        <h1> {{ product.grade }} </h1>
                 <div class="img-container">
-
-                    <img class="main-img" :src="product.imageLink" alt="main image">
-                    <div class="small-img-img">
-                        <img :src="product.imageLink" alt="different image view" class="small">
-                        <img :src="product.imageLink" alt="different image view" class="small">
-                        <img :src="product.imageLink" alt="different image view" class="small">
-                    </div>
-                </div>
-
-                <div class="product-infomation">
-                    <div title="Product Information">
-                        <div class="title">
-                            {{ product.name }}
-                        </div>
-                        <p>{{ product.price }}</p>
-                        <button href="#" variant="primary">Add to Cart</button>
 
                         <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -40,50 +25,19 @@
                 </div>
                 </div>
                 <div id="comment">
-                    <p>dont just take our word, see our customers testimonies <button>  <router-link class="nav-link" to="/comments"> here  </router-link>
+                    <p>read testimonies from other {{product.grade }} students  <button>  <router-link class="nav-link" to="/comments"> here  </router-link>
      </button></p>
                 </div>
-                   <br><br>
-             
-                <h3 id="h3">more from our store</h3>
-                <div id="more-goods">
-                    
-      <span v-for="product in allProducts"  :key="product.id">
-    
-                   <a href="#" @click="goToProduct(product)">
-     
-      
-      <img :src="product.imageLink" id="img2" />
-  
-                   </a>
-      </span>
-               
-                </div>
-                <br>
-                <div id="line"></div>
-    <div id="lorem3"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non adipisci optio architecto atque nisi, 
-        odit enim accusamus consectetur praesentium   Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis assumenda eos 
-        eveniet. Repudi
-        andae ut deserunt ab iusto, reprehenderit adipisci similique numquam error voluptatum voluptas nulla, corporis mollitia! Hic,
-         molestias velit! <br>  laborum ex suscipit eligendi minus dolores aperiam exercitationem possimus? <br>  lestiae. Lorem ipsum dolor 
-         sit, amet consectetur adipisicing elit. Sunt aperiam qui animi hic! Nobis atque sit voluptatum nisi, veritatis neque ipsa placeat.
-          Ex rerum quidem sunt. Ea corrupti fuga amet!</div>
                 <div class="footer-container">
        <Footer :footer='footer' id="footer" />
-
- </div>
-           
-            <!-- <div class="product-infomation">
-                <h3>Product Detail</h3>
-                <p>{{ productDetail.productInf }}</p>
-            </div> -->
-      </div>
-
+</div>
+            
   </div>
 </template>
 
 <script>
 import Footer from '@/components/Footer.vue'
+import Header from '@/components/Header.vue'
  
 export default {
            methods: {
@@ -104,8 +58,9 @@ computed: {
    },
       
      components: {
-      Footer
-  } 
+      Footer,
+      Header
+      } 
       }
 </script>
 

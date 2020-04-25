@@ -1,41 +1,39 @@
 <template>
-  <div class="container">
-    <h1>Login Page</h1>
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <form v-on:submit.prevent>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              v-model="email"
-              aria-describedby="emailHelp"
-              placeholder="Email Address"
-            />
-          </div>
-          <div class="form-group">
-            <input 
-            type="password" 
-            class="form-control" 
-            id="password"
-            v-model="password" 
-            placeholder="Password" />
-          </div>
-
-          <button @click="login()" event.prevent class="btn btn-primary">Login</button>
-        </form>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-    <p>{{sitename}}</p>
-    <p>this a a {{page}} page</p>
+  <div>
+  <div id="sign-page" >
+     <Header :header='header' id="header" />
+<div class="sign-up-container">
+    <div>
+       <input type="email" value="email" placeholder="email">
+       </div>
+       <div>
+       <input type="password"  placeholder="password">
+       </div>
+       <div>
+           <button  type="submit" class="register">login</button>
+   </div>
+   <div>
+             <p class="log-in-text">
+               Dont have an account? create an account.
+             </p>
+           </div>
+                    <router-link class="nav-link" to="/register" id="sign-in">  
+               Here
+                 </router-link>
+            
+            
+           </div>
   </div>
-
+  <div class="footer-container">
+       <Footer footer='footer' id="footer" />
+</div>
+  </div>
+ 
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 import router from '../router/'
 export default {
   name: "Login",
@@ -63,13 +61,24 @@ export default {
     page() {
       return  this.$store.state.pageName;
     }
+  },
+   components: {
+    Header,
+      Footer
   }
 };
 </script>
 
 <style scoped>
+.row{
+  margin-top:300px;
+  height: 200px;
+  width: 200px;
+  background: violet;
+ }
+ /*
 p{
   font-size:30px;
-  color: blue;
-}
+  color: tomato;
+} */
 </style>

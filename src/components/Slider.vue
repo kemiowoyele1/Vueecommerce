@@ -10,7 +10,7 @@
   <div id="caro-container">
     <carousel :per-page="1" :autoplay = true :loop = 'true'  id="caro">
       <slide v-for="image in slide" :key="image.id" id="slide">
-      <img :src="image.imageLink" style="width:90%;height:400px" />
+      <img :src="image.imageLink" />
       </slide>
     </carousel>
     
@@ -33,28 +33,39 @@ export default {
 
 <style  scoped>
 #caro-container{
- background-image: url('https://cdn.shopify.com/s/files/1/0276/6855/articles/Wax_print_wash_3_1024x1024.jpg?v=1478201027');
  width:60vw;
-
+  height: 50vh;
 }
 #caro{
+   width:60vw;
+    height: 60vh;
+ 
+ }
+ img{
   background-color: rgba(41, 36, 44, 0.8);
   width:60vw;
+  height: 100%;
+   
 
  }
  #slide{
-   height: 150%;
-   /* background-color: brown; */
+   height: 50vh;
+  /* background-color: brown; */
  }
  @media only screen and (max-width: 600px) {
  
 #caro{
-  width:60vw;
-
+  width:100%;
+  
  }
 #caro-container{
-  width:60vw;
+  width:100%;
+  margin: 0;
+  position: relative;
 
+}
+img{
+  width:100%;
 }
  }
 </style>
