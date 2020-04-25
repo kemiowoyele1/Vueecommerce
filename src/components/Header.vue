@@ -148,7 +148,15 @@ margin:auto;
   color: rgb(46, 241, 20);
 
  }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+  
+.home{
+  height: 50px;
+   width: 10vw;
+   display: inline-block;
+   position: absolute; 
+   left: 2px;
+ }
   
      #name{
 
@@ -162,39 +170,15 @@ font-weight: 400;
  }
  
 .dummy{
-   height: 50px;
-width: 50px;
-display: inline-block;
-  background-size: 100% 100%;
-   letter-spacing: 6px;
-  animation-name: dummy;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 5s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-
-}
-@keyframes dummy {
-  0%{
-    width:50px;
-    height: 50px;
-  }
-  50%{
-    width:45px;
-    height: 45px;
-  }
-   100%{
-    width:50px;
-    height: 50px;
-  }
-  } 
+  display:none;
+   }
+ 
    .sign{
     width: fit-content;
     height: 100%;
     display: inline-block;
     position: absolute;
-    left: 86vw;
+    left: 76vw;
    
   }
   #signup, #signin{
@@ -211,13 +195,5 @@ display: inline-block;
     text-decoration: none;
   }
 }
-/* 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}  */
 </style>

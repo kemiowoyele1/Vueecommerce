@@ -365,6 +365,13 @@ animation-duration: 2s;
         transform: rotate(360deg);
       }
   }
+     @media only screen and (max-width: 1100px) {
+  #car-cover{
+    width:40%;
+  
+  }
+  
+  }
   @media only screen and (max-width: 600px) {
   #car-cover{
     width:100%;
@@ -372,4 +379,6 @@ animation-duration: 2s;
   }
   
   }
+
+
 </style>

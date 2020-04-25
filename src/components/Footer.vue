@@ -29,7 +29,7 @@ width: 100%;
 margin: 0;
 font-size: 100px;
 font-weight: bold;
-padding: 100px 50px;
+padding: 100px;
 text-shadow: 0.5px 0.5px tomato, -0.5px -0.5px tomato;
 }
 
@@ -37,6 +37,8 @@ text-shadow: 0.5px 0.5px tomato, -0.5px -0.5px tomato;
 @media only screen and (max-width: 600px) {
 #footer{
 font-size: 50px;
+padding: 50px;
+
 }
 }
 </style>

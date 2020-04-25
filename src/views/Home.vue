@@ -13,7 +13,7 @@
       <!-- <Slider  :slide="moving" :key="moving.id" id="slider"/> -->
       </div>
       <!-- </div> -->
-           <div class="choose-class-title">choose your class</div>
+           <div class="choose-class-title">choose your ride``</div>
       <div class="choose-class" >
    
 <div v-for="product in allProducts"  :key="product.id" id="car-cover">
@@ -224,13 +224,23 @@ box-shadow: 2px 2px 6px rgb(92, 22, 10);
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
-  .categories {
+
+     @media only screen and (max-width: 1100px) {
+   .categories {
  width:80vw;
  margin: 20px 10% ;
  position: relative;
  
   }
+   #value-card{
+  display: block;
+  width:96%;
+  margin-left:2%;
+  margin-top: 3px;
+}
+  }
+@media only screen and (max-width: 600px) {
+ 
  .home {
  width:80vw;
  margin-left: 10% ;
@@ -239,11 +249,6 @@ box-shadow: 2px 2px 6px rgb(92, 22, 10);
  
   }
   
-  #value-card{
-  display: block;
-  width:96%;
-  margin-left:2%;
-  margin-top: 3px;
-}
+ 
 }
 </style>
