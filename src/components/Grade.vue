@@ -368,6 +368,7 @@ animation-duration: 2s;
      @media only screen and (max-width: 1100px) {
   #car-cover{
     width:40%;
+
   
   }
   
@@ -375,8 +376,14 @@ animation-duration: 2s;
   @media only screen and (max-width: 600px) {
   #car-cover{
     width:100%;
-  
+    height:150px;
   }
+  
+.tyre{
+      animation: none;
+   
+    
+}
   
   }
 

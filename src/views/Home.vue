@@ -13,7 +13,7 @@
       <!-- <Slider  :slide="moving" :key="moving.id" id="slider"/> -->
       </div>
       <!-- </div> -->
-           <div class="choose-class-title">choose your class</div>
+           <div class="choose-class-title">choose your class </div>
       <div class="choose-class" >
    
 <div v-for="product in allProducts"  :key="product.id" id="car-cover">
