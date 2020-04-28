@@ -1,6 +1,6 @@
 <template>
 <div>
- <Header :header='header' id="header" />
+ <Header header='header' id="header" />
 
   <div class="sign-up-container">
     

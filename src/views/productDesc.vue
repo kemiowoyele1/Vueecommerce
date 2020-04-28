@@ -1,27 +1,23 @@
 <template>
   <div>
       <div class="main-container">
-              <Header :header='header' id="header" />
+              <Header header='header' id="header" />
 
             <div class="container">
                         <h1> {{ product.grade }} </h1>
-                <div class="img-container">
+             <div class="choose-subject">CHOOSE SUBJECT</div>
+                </div>
+                <div class="subjects-container">
+                    <router-link  to="/levels" >  
+                <div id="math" class="subjects">MATHEMATICS</div>
+                 </router-link>
+                     
 
-                        <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-              <!-- <Slider /> -->
-   
-            <p id="lorem2">   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         </p>
-         
-                    </div>
+                  <router-link  to="/levels">  
+                  <div id="english" class="subjects">ENGLISH LANGUAGE</div>
+               </router-link>
+                  
+                  
                 </div>
                 </div>
                 <div id="comment">
@@ -29,7 +25,7 @@
      </button></p>
                 </div>
                 <div class="footer-container">
-       <Footer :footer='footer' id="footer" />
+       <Footer footer='footer' id="footer" />
 </div>
             
   </div>
@@ -71,7 +67,6 @@ computed: {
     width: 100vw;
     min-height: 100%;
     margin-top: 300px;
-    background-color: bisque;
     margin: 0;
     padding:0;
     overflow: hidden;
@@ -81,41 +76,42 @@ p{
     margin: 20px 5px;
 }
 h1{
-margin-top:100px;
+margin-top:20px;
+font-size:50px;
 font-weight: 800;
-
-}
-.img-container{
-    width: 60%;
-    margin: 0;
-}
-
-.main-img{
-       width: 100%;
-    margin-top: 50px;
-    height: 60vh;
-    display: inline-block;
-}
-.small-img{
-    width: 100%;
-    margin: 50px 0;
-}
-.product-infomation{
-    width: 35vw;
-    display: inline-block;
-    position: absolute;
-    left: 60%;
-    top: 30vh;
-
-    /* float:right; */
+color:darkslateblue;
 
 }
 .title{
     font-size:30px;
 }
-.small{
-    width: 20%;
-    margin:20px 2%;
+.subjects-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+ height:200px;
+}
+.subjects{
+    padding: 20px;
+      background-image: url(../assets/head.jpg);
+    background-size: 100% 100%;
+     width: 80%;
+     font-size: 40px;
+     font-weight: 900;
+     color:tomato;
+     text-shadow:1px 1px darkslateblue;
+       animation: type 1s steps(32);
+    margin: 20px auto;
+     overflow: hidden;
+       border-top:10px solid rgb(224, 116, 97);
+       border-bottom:10px solid rgb(224, 116, 97);
+    border-left:10px solid tomato;
+    border-right:10px solid tomato;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(65, 39, 36, 0.616),-2px -2px rgba(68, 38, 31, 0.774),
+                5px 5px 5px  rgba(65, 39, 36, 0.616),-5px -5px  5px rgba(68, 38, 31, 0.774);
+   
+  
+
 }
 button{
     padding: 10px;
@@ -126,56 +122,26 @@ button{
     border-radius: 15px;
     background-color: tomato;
 }
-/* #line   {
-    height: 10px;
-    background-color: rgb(18, 16, 37);
-} */
-#lorem2{
-    display: block;
-    color: tomato;
-     padding-top: 20px;
-  }
-  #lorem3{
-    display: block;
-     padding: 20px;
-  }
-#more-goods{
-    display: block;
-      border-top: 10px ridge  rgb(235, 155, 143);
-      border-bottom: 10px ridge rgb(235, 155, 143);
 
-     background-color:     rgb(240, 190, 155);
-
-
-}
-
-#h3{
-    font-weight: bold;
-}
-#img2{
-      display: inline-block;
-    width: 70px;
-    height: 70px;
-    margin:20px;
-     /* float: left;   */
-}
-
-@media only screen and (max-width: 600px) {
-  .img-container{
-      width: 100vw;
-      display: block;
-
-  }
-  .product-infomation{
-    width: 100vw;
-    display: block;
-    position: relative;
-   margin: 30px 0;
-   left: 0;
-   top: 0;
-
-    /* float:right; */
-
-}
-}
+	.choose-subject {
+       animation: type 2s steps(32);
+       overflow: hidden;
+       white-space: nowrap;
+       font-family: consolas;
+       text-align: center;
+       width: fit-content;
+       font-size: 40px;
+       color: tomato;
+       font-weight: 600;
+       text-shadow: 1px 1px darkslateblue, -1px -1px darkslateblue;
+       margin-left: 50px;
+       }
+	@keyframes type {
+		0%{
+			width: 0ch;
+		}
+		100% {
+			width: 50%;
+		}
+	}
 </style>

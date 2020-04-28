@@ -1,7 +1,7 @@
 <template>
   <div id="container">
      <!-- <div class="header-container"> -->
-       <Header :header='header' id="header" />
+       <Header header='header' id="header" />
 
  <!-- </div> -->
      <!-- <div class="display-container"> -->
@@ -13,7 +13,7 @@
       <!-- <Slider  :slide="moving" :key="moving.id" id="slider"/> -->
       </div>
       <!-- </div> -->
-           <div class="choose-class-title">choose your class </div>
+           <div class="choose-class-title">choose your class  </div>
       <div class="choose-class" >
    
 <div v-for="product in allProducts"  :key="product.id" id="car-cover">
@@ -65,7 +65,7 @@
   </ul>
    </div> -->
  <div class="footer-container">
-       <Footer :footer='footer' id="footer" />
+       <Footer footer='footer' id="footer" />
 </div>
  </div> 
       
@@ -91,28 +91,7 @@ export default {
          { name:'our kids enjoy learning'},
          {name:'bring the best out in your kids'}
 
-      ],
-       moving: [
-         {
-       
-           imageLink: require('./../assets/slide1.jpg')
-       },
-       {
-       
-           imageLink: require('./../assets/slide2.jpg')
-       },
-       {
-       
-           imageLink: require('./../assets/slide3.jpg')
-       },
-       {
-       
-           imageLink: require('./../assets/slide4.jpg') 
-
-       }
-      
       ]
-     
     }
   },
     computed: {
@@ -238,6 +217,11 @@ box-shadow: 2px 2px 6px rgb(92, 22, 10);
   margin-left:2%;
   margin-top: 3px;
 }
+
+.display-card{
+   margin: 10px auto;
+   width: 90%; 
+}
   }
 @media only screen and (max-width: 600px) {
  
@@ -250,6 +234,13 @@ box-shadow: 2px 2px 6px rgb(92, 22, 10);
   }
   
 
+.choose-class-title{
+  padding:7px;
+   margin: auto;
+  margin-top: 7px;
+  font-weight: 600;
+  font-size: 25px;
+  }
 
 }
 </style>

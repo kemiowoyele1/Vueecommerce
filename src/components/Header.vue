@@ -10,9 +10,15 @@
               <div id="right-dummy" class="dummy"></div>
          </div>
          <div class="sign">
-             <router-link class="nav-link" to="/register" id="signup">sign up </router-link>
-               <router-link class="nav-link" to="/login" id="signin">  sign in  </router-link>
+           <div>
+              <router-link class="nav-link" to="/register" id="signup">subscribe </router-link>
+            
+           </div>
+           <div>
+                <router-link class="nav-link" to="/login" id="signin">  sign in  </router-link>
      
+           </div>
+            
          </div>
             </div>
 
@@ -41,6 +47,9 @@ export default {
    background-image: url('./../assets/head.jpg');
    background-size: 100% 100%;
    /* position: fixed; */
+   position:relative;
+   display:grid;
+   grid-template-columns:10% 70% 20%;
   z-index: 200;
   box-shadow: 0 10px 10px rgb(212, 214, 196);
   
@@ -50,15 +59,12 @@ export default {
    background-size: 100% 100%;
    height: 100px;
    width: 10vw;
-   position: fixed;
-   display: inline-block;
-   position: absolute; 
-   left: 2px;
+      left: 2px;
  }
 .name-container{
    background-image: url('./../assets/name.png');
    background-size: 100% 100%;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 10px;
   height: 100%;
   border: 8px solid rgb(57, 135, 238);
@@ -66,16 +72,15 @@ export default {
   }
 
   .sign{
-    width: 10vw;
     height: 100%;
-    display: inline-block;
-    position: absolute;
-    left: 86vw;
+ display: grid;
+    grid-row:1fr 1fr ;
    
   }
   #signup, #signin{
-    display: block;
-     padding: 10px;
+    float: right;
+    margin-right: 20px;
+      padding: 10px;
     background-color: tomato;
     color:antiquewhite;
     font-weight: bold;
@@ -85,7 +90,8 @@ export default {
     border-radius: 5px;
     box-shadow: 2px 2px rgb(207, 186, 157),-2px -2px rgb(207, 186, 157);
     text-decoration: none;
-  }
+    width: fit-content;
+   }
 .dummy{
    height: 50px;
 width: 100px;
@@ -153,9 +159,7 @@ margin:auto;
 .home{
   height: 50px;
    width: 10vw;
-   display: inline-block;
-   position: absolute; 
-   left: 2px;
+   margin-left: 6px;
  }
   
      #name{
@@ -170,16 +174,30 @@ font-weight: 400;
  }
  
 .dummy{
-  display:none;
+  width: 30px;
+  height: 30px;
+  animation: none;
    }
  
+ 
+@keyframes dummy {
+  0%{
+    width:50px;
+    height: 45px;
+  }
+  50%{
+    width:45px;
+    height: 50px;
+  }
+   100%{
+    width:50px;
+    height: 45px;
+  }
+  } 
    .sign{
     width: fit-content;
     height: 100%;
-    display: inline-block;
-    position: absolute;
-    left: 76vw;
-   
+     
   }
   #signup, #signin{
     display: block;

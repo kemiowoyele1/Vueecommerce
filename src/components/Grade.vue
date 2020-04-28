@@ -384,6 +384,13 @@ animation-duration: 2s;
    
     
 }
+
+#text-display{
+      padding: 4px;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
   
   }
 

@@ -8,6 +8,7 @@ import productDesc from '../views/productDesc.vue'
 import ProductDetails from '../views/ProductDetails.vue'
 import Users from '../views/Users.vue'
 import Comments from '../views/Comments.vue'
+import Levels from '../views/Levels.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,13 @@ const routes = [{
     {
         path: '/products',
         name: 'ProductDetails',
+      
+       },
+
+       {
+        path: '/levels',
+        name: 'Levels',
+        component: Levels,
       
        },
 
