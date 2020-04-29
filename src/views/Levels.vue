@@ -351,22 +351,24 @@ a{
     .collections{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      width:fit-content;
+      background-color:rgba(82, 65, 62, 0.288);
     }
     .craft{
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: fit-content;
         color: wheat;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 300;
-        margin: 0 auto;
+        margin: 0 10px;
           background-size: 100% 100%;
       background-repeat: no-repeat;
     
     }
     .craft-image{
-       width: 50px;
-      height: 50px;
+       width: 30px;
+      height: 30px;
       background-image: url(../assets/snail.png);
         background-size: 100% 100%;
       background-repeat: no-repeat;
