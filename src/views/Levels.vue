@@ -4,7 +4,17 @@
      <div id="term-container">
      
 
-  <div class="term" id="term1">First Term
+  <div class="term" id="term1">
+
+<div class="collections">
+
+ <div class="craft"><div class="coin-image"></div> <span class="coin-text">0</span></div>
+    <div class="craft"><div class="gem-image">  </div> <span class="gem-text">0</span></div>
+    <div class="craft"><div class="craft-image"></div><span class="craft-text">0</span></div>
+   
+
+</div>
+     First Term
        <div class="week-container">
          <router-link class="nav-link" to="/register">  
     <div class="week" id="week1">
@@ -72,7 +82,23 @@
        </div>
   </div>
 
- <div class="term" id="term2">Second Term
+
+
+
+ <div class="term" id="term2">
+   
+   
+   
+<div class="collections">
+
+ <div class="craft"><div class="coin-image"></div> <span class="coin-text">0</span></div>
+    <div class="craft"><div class="gem-image">  </div> <span class="gem-text">0</span></div>
+    <div class="craft"><div class="craft-image"></div><span class="craft-text">0</span></div>
+   
+
+</div>
+   
+   Second Term
     <div class="week-container">
          <router-link class="nav-link" to="/register">  
     <div class="week" id="week1">
@@ -140,7 +166,19 @@
        </div>
  </div>
 
-  <div class="term" id="term1">Third Term
+  <div class="term" id="term1">
+    
+    
+<div class="collections">
+
+ <div class="craft"><div class="coin-image"></div> <span class="coin-text">0</span></div>
+    <div class="craft"><div class="gem-image">  </div> <span class="gem-text">0</span></div>
+    <div class="craft"><div class="craft-image"></div><span class="craft-text">0</span></div>
+   
+
+</div>
+    
+    Third Term
 
      <div class="week-container">
          <router-link class="nav-link" to="/register">  
@@ -249,9 +287,10 @@ export default {
 .term{
   width: 80%;
   margin: 40px auto;
-  background-image: url(../assets/head.jpg);
+  background-image: url(../assets/name.png);
   background-size: 100% 100%;
   color: tomato;
+  text-shadow: 1px 1px antiquewhite, -1px -1px antiquewhite;
   font-weight: 900;
   font-size: 40px;
    border:10px solid burlywood;
@@ -273,7 +312,7 @@ export default {
   /* background-color: wheat; */
   /* border:2px solid darkslateblue; */
   margin: 20px 20px 0 0;
-  background-image: url(../assets/snail.png);
+  background-image: url(../assets/badge.png);
   background-size: 100% 100%;
   /* border-radius: 30%; */
 }
@@ -305,4 +344,49 @@ export default {
 #lock1{
   visibility: hidden;
 }
+a{
+        text-decoration: none;
+
+    }
+    .collections{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .craft{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: fit-content;
+        color: wheat;
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0 auto;
+          background-size: 100% 100%;
+      background-repeat: no-repeat;
+    
+    }
+    .craft-image{
+       width: 50px;
+      height: 50px;
+      background-image: url(../assets/snail.png);
+        background-size: 100% 100%;
+      background-repeat: no-repeat;
+    
+     }
+   .coin-image{
+           background-image: url(../assets/treasure.png);
+            width: 50px;
+           height: 50px;
+             background-size: 100% 100%;
+      background-repeat: no-repeat;
+    
+   }
+   .gem-image{
+           background-image: url(../assets/gem.gif);
+            width: 50px;
+           height: 50px;
+             background-size: 100% 100%;
+      background-repeat: no-repeat;
+    
+     
+   }
 </style>

@@ -92,7 +92,7 @@ color:darkslateblue;
 }
 .subjects{
     padding: 20px;
-      background-image: url(../assets/head.jpg);
+      background-image: url(../assets/name.png);
     background-size: 100% 100%;
      width: 80%;
      font-size: 40px;
@@ -109,7 +109,6 @@ color:darkslateblue;
     border-radius: 5px;
     box-shadow: 2px 2px rgba(65, 39, 36, 0.616),-2px -2px rgba(68, 38, 31, 0.774),
                 5px 5px 5px  rgba(65, 39, 36, 0.616),-5px -5px  5px rgba(68, 38, 31, 0.774);
-   
   
 
 }
@@ -121,6 +120,8 @@ button{
     font-size: 30px;
     border-radius: 15px;
     background-color: tomato;
+     text-decoration: none;
+  
 }
 
 	.choose-subject {
@@ -144,4 +145,9 @@ button{
 			width: 50%;
 		}
 	}
+
+     a{
+        text-decoration: none;
+
+    }
 </style>
