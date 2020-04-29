@@ -373,7 +373,7 @@ a{
     
      }
    .coin-image{
-           background-image: url(../assets/treasure.png);
+           background-image: url(../assets/coins.png);
             width: 50px;
            height: 50px;
              background-size: 100% 100%;
